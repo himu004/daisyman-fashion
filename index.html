@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="cupcake">
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,18 @@
     <!-- Tailwind and daisyui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind Customizaion -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    backgroundImage: {
+                        'hero-bg': "url(images/yellow-bg.jpg)",
+                    }
+                }
+            }
+        }
+    </script>
     <title>DaisyMan</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 </head>
@@ -16,13 +28,14 @@
 
     <!-- Header Section Starts -->
     <header>
-
+        <!-- NavBar -->
         <nav>
             <div class="navbar bg-base-100 py-5 px-5">
                 <div class="flex-1">
-                    <a class="btn btn-ghost normal-case text-xl">DaisyMan Fashion</a>
+                    <a class="btn btn-ghost normal-case text-2xl">DaisyMan <span
+                            class="text-orange-500">Fashion</span></a>
                 </div>
-                <div class="flex-none">
+                <div class=" flex-none">
                     <div class="dropdown dropdown-end">
                         <label tabindex="0" class="btn btn-ghost btn-circle">
                             <div class="indicator">
@@ -67,14 +80,14 @@
         </nav>
         <!-- Hero Section -->
         <section>
-            <div class="hero min-h-screen" style="background-image: url(images/yellow-bg.jpg);">
+            <div class="hero min-h-[calc(100vh-90px)] bg-hero-bg">
                 <div class="hero-overlay bg-opacity-60"></div>
                 <div class="hero-content text-center text-neutral-content">
                     <div class="max-w-md">
-                        <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+                        <h1 class="mb-5 text-5xl font-bold">Welcome to <br>DaisyMan Fashion</h1>
                         <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
                             exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                        <button class="btn btn-primary">Get Started</button>
+                        <button class="btn rounded-full px-7 text-xl">Shop Now</button>
                     </div>
                 </div>
             </div>
@@ -83,7 +96,65 @@
 
     <!-- Main ection Starts -->
     <main class="container mx-auto">
+        <!-- Huge Collection Section -->
 
+        <section class="mt-24">
+            <!-- Content -->
+            <div class="mb-10 text-center">
+                <h1 class="text-5xl text-extrabold mb-5">Huge Collection</h1>
+                <p>Browse from a various collection</p>
+            </div>
+            <!-- Huge collection container -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- First Card -->
+                <div>
+                    <div class="card bg-base-100 shadow-xl image-full">
+                        <figure><img src="images/hoodies.avif" alt="Shoes" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Cloths!</h2>
+                            <p>At DaisyMan, we believe that style is refletion of your unique personality and our
+                                mission is to provide you with a diverse and trendy collection
+                                nique personality and our
+                                mission is to provide you with a diverse and trendy collection</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Card -->
+                <div>
+                    <div class="card bg-base-100 shadow-xl image-full">
+                        <figure><img src="images/shoes.avif" alt="Shoes" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Shoes!</h2>
+                            <p>At DaisyMan, we believe that style is refletion of your unique personality and our
+                                mission is to provide you with a diverse and trendy collection
+                                provide you with a diverse and trendy collection</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Third Card -->
+                <div>
+                    <div class="card bg-base-100 shadow-xl image-full">
+                        <figure><img src="images/perfume.avif" alt="Shoes" /></figure>
+                        <div class="card-body">
+                            <h2 class="card-title">Perfumes!</h2>
+                            <p>At DaisyMan, we believe that style is refletion of your unique personality and our
+                                mission is to provide you with a diverse and trendy collection
+                                mission is to provide you with a diverse and trendy collection</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn">Explore</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </main>
 
     <!-- Footer Section Starts -->
